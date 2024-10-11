@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Cards</title>
+    <style>
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .card img {
+        width: 250px;
+        height: 200px;
+        border-radius: 10px;
+
+        
+      }
+      .card h2 {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+        padding: 10px;
+      }
+      .card p {
+        margin: 5px 0;
+        padding: 10px;
+      }
+      .card hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 1px solid #ddd;
+      }
+      .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px;
+      }
+      #head1 {
+        color: rgb(189, 89, 12);
+        font-size: 45px;
+        font-weight: 600;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="head1">Recipe Cards</h1>
+    <hr />
+    <div style="align-items: center; justify-content: center">
+      <center><input type="text" placeholder="Search item " /></center>
+    </div>
+
+    <div id="recipe-root" class="card-container"></div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

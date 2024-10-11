@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Cards</title>
+    <style>
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 240px;
+        display: inline-block;
+        vertical-align: top;
+        overflow: hidden;
+ 
+      }
+      .card img {
+        width: 100%;
+        height: 200px;
+      }
+      .card h2 {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+        padding: 10px;
+      }
+      .card p {
+        margin: 5px 0;
+        padding: 10px;
+      }
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px;
+        height: 100vh;
+        width: 80%; 
+        overflow-y: scroll;  
+        margin-bottom: 35px;
+         scrollbar-width: thin; 
+        scrollbar-color: #888 #f1f1f1; 
+      }
+
+      /* WebKit-based browsers (Chrome, Safari) */
+      .card-container::-webkit-scrollbar {
+        width: 12px; /* Width of the scrollbar */
+      }
+
+      /* Track (background of the scrollbar) */
+      .card-container::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Light gray background */
+        border-radius: 10px; /* Rounded corners for the track */
+      }
+
+      /* Handle (scrollbar thumb) */
+      .card-container::-webkit-scrollbar-thumb {
+        background: #888; /* Darker gray thumb */
+        border-radius: 10px; /* Rounded corners for the thumb */
+      }
+
+      /* Handle on hover */
+      .card-container::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Darker shade on hover */
+      }
+      #head1 {
+        color: rgb(189, 89, 12);
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+      }
+      #search-container {
+        text-align: center;
+        margin: 20px;
+      }
+      #search-input {
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="head1">Recipe Cards</h1>
+    <hr />
+
+    <div id="search-container">
+      <input type="text" id="search-input" placeholder="Search recipes" />
+    </div>
+
+    <div id="recipe-root" class="card-container"></div>
+
+    <section style="background-color: red; height: 100vh"></section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
